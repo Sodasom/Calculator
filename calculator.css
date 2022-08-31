@@ -30,7 +30,7 @@ body {
   align-items: center ;
 }
 
-.header {
+.wrapper_header_top {
   width: 375px;
   display: flex;
   justify-content: space-between;
@@ -101,7 +101,7 @@ body {
   gap: 10px 13px;
 }
 
-.btn_1, .btn_2, .btn_mrc, .btn_3, .btn_4, .btn_5, .btn_6, .btn_plus {
+.btn_row_1, .btn_row_2, .btn_row_3, .btn_row_4, .btn_row_5, .btn_row_6 {
   background-color: #baa0a3;
   border-top: 2px solid #66474b;
   border-right: 2px solid #66474b;
@@ -111,21 +111,21 @@ body {
   color: #3a343e;
 }
 
-.btn_1 {
+.btn_row_1 {
   font-size: 18px;
   font-weight: 500;
 }
 
-.btn_2, .btn_3, .btn_4, .btn_5, .btn_6, .btn_p, .btn_plus {
+.btn_row_2, .btn_row_3, .btn_row_4, .btn_row_5, .btn_row_6 {
   font-size: 30px;
 }
 
-.btn_mrc {
+.mrc {
   font-size: 22px;
 }
 
 
-.btn_p {
+.pink {
   background-color: #a46275;
   border-top: 2px solid #7c3e4f;
   border-right: 2px solid #7c3e4f;
@@ -135,7 +135,7 @@ body {
   color: #3a343e;
 }
 
-.btn_plus {
+.plus {
   grid-row: 4 / 6;
   grid-column: 5 / 6;
 }
@@ -146,20 +146,43 @@ body {
   color: #3a343e;
 }
 
-.on {
-  position: absolute;
-  bottom: 382px;
-  left: 534px;
+.wrapper_body button {
+  position: relative;
+  cursor: pointer;
 }
 
-.rate {
-  position: absolute;
-  top: 305px;
-  right: 710px;
+.wrapper_body button:active {
+  border-color: #d2b9bc;
 }
 
-.tax {
+
+.btn_row_1:after {
+  content: "";
   position: absolute;
-  top: 305px;
-  right: 555px;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 100%;
+  font-size: 12px;
+  font-weight: bold;
+  color: #3a343e;
+}
+
+.percent:after {
+  content: "RATE SET";
+}
+
+.tax_plus:after {
+  content: "TAX RATE";
+}
+
+.ac:after {
+  content: "ON";
+  position: absolute;
+  top: 16px;
+  left: -22px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #3a343e;
 }
